@@ -1,0 +1,15 @@
+#!/bin/bash
+# Listing of dropped files for easy playlist/save lists etc...
+SFile="test.txt"
+
+coproc yad --width 300 --height 500 --text-info --title='Listing files: ' \
+--top --tail --text="Files will also be listed in $SFile" --show-uri
+
+yad --dnd --text 'Glissez vos fichiers ici...' --top \
+--tooltip --image 'designcarton.png' --center  \
+--button='Save':'echo ""' \
+--button=Clear:"echo -e '\f' >&${COPROC[1]}" \
+--button Cancel >&${COPROC[1]}
+kill $COPROC_PID
+
+exit 0
