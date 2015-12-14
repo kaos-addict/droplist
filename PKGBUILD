@@ -10,6 +10,8 @@ source=("droplist")
 sha512sums=('')
 
 package() {
- cd "${srcdir}"
- install -Dm 755 droplist "${pkgdir}/usr/bin/droplist"
+    cd "${srcdir}"
+    install -Dm755 droplist "${pkgdir}/usr/bin/droplist"
+    install -Dm755 droplist.png "${pkgdir}/usr/share/icons/droplist.png"
+    install -Dm755 droplist.desktop "${pkgdir}/usr/share/applications/droplist.desktop"
 }

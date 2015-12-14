@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=droplist
+GenericName=File lister
+Exec=droplist
+Icon=droplist
+Categories=Utilities;
+Comment=Drag files drop list
+
+GenericName[fr]=Vidéothèque
+Comment[fr]=Organise votre vidéothèque
